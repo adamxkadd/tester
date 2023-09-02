@@ -7,6 +7,6 @@ data = json.dumps({"msg": "c moi"})
 headers = {'Content-Type': 'application/json'}
 response = requests.post(url=url, data=data, headers=headers)
 st.write("affiche data")
-st.write(data.text)
+st.write(data)
 st.write("affiche reponse")
 st.write(response.text)
