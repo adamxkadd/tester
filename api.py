@@ -3,6 +3,6 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
-@app.get("/hello/")
-def read_root():
+@app.post("/hello")
+def read_root(input=):
     return {"message": "Hello World"}
