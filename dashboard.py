@@ -12,7 +12,7 @@ user_input = st.text_input("Entrez des données:", "Exemple de données")
     
 # Bouton pour envoyer les données à l'API
 if st.button("Predire"):
-#     data = {"input_data": user_input}
+    data = {"input_data": user_input}
 #     response = requests.post(f"{API_URL}/predict/", json=data)
     
 #     if response.status_code == 200:
