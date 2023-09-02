@@ -1,8 +1,14 @@
 import streamlit as st
 import requests
 
-response = requests.get("https://tester-api.streamlit.app/")
-data = response.json()
+st.title("Hello World with FastAPI and Streamlit")
 
-st.write("Réponse de l'API FastAPI :")
-st.write(data)
+try:
+    # Faites une requête à votre API FastAPI
+    response = requests.get("https://votre-url-fastapi/")
+    response.raise_for_status()  # Vérifiez si la réponse est valide
+    data = response.json()
+    st.write("Réponse de l'API FastAPI :")
+    st.write(data)
+except requests.exceptions.RequestException as e:
+    st.error(f"Une erreur s'est produite : {e}")
