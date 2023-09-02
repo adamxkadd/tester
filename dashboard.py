@@ -17,6 +17,7 @@ if st.button("Prédire"):
     st.write("reponse : ") 
     st.write(response)
     st.write(response.status_code)
+    st.write(response.data)
 #     if response.status_code == 200:
 #         result = response.json()
 #         st.success(result["result"])
