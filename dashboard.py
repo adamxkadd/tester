@@ -1,6 +1,8 @@
 # dashboard.py
 import streamlit as st
 import requests
+import json
+
 
 API_URL = "https://scoe-banque.streamlit.app"  # Mettez l'URL de votre API FastAPI ici
 
