@@ -15,9 +15,8 @@ if st.button("Prédire"):
     data = {"input_data": user_input}
     st.write("Données envoyées à l'API :")
     st.write(data)
-
     
-#     response = requests.post(f"{API_URL}/predict/", json=data)
+    response = requests.post(f"{API_URL}/predict/", json=data)
     
 #     if response.status_code == 200:
 #         result = response.json()
