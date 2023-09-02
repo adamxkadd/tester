@@ -1,6 +1,9 @@
 # api.py
 from fastapi import FastAPI
 from pydantic import BaseModel
+import json
+
+
 
 app = FastAPI()
 
@@ -9,4 +12,5 @@ class InputData(BaseModel):
 
 @app.post("/hello")
 def read_root(input_data: InputData):
-    return {"message": "Hello World"}
+    result = json.loads(r'[{"id": 1}, {"id": 2}]')
+    return {result}
