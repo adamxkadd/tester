@@ -11,7 +11,8 @@ data = json.dumps({"msg": "c moi"})
 # Spécifiez le type de contenu JSON dans l'en-tête
 headers = {'Content-Type': 'application/json'}
 
-response = requests.post(url=url, data=data, headers=headers)
+# response = requests.post(url=url, data=data, headers=headers)
+response = requests.post(url=url, data=data)
 
 # Affichez la réponse
 st.write(response.text)
