@@ -21,14 +21,15 @@ if st.button("Prédire"):
     
     # Vérifiez si la réponse a un code de statut 200 (OK)
     if response.status_code == 200:
-        try:
-            result = response.json()
+        response_json = response.json()
+        if isinstance(response_json, dict):  # Vérifiez que la réponse est un dictionnaire JSON
             st.write("Contenu de la réponse JSON :")
-            st.write(result)
-        except json.decoder.JSONDecodeError as e:
-            st.error("Erreur lors de l'analyse de la réponse JSON.")
+            st.write(response_json)
+        else:
+            st.error("La réponse de l'API n'est pas un JSON valide.")
     else:
-        st.error("Une erreur s'est produite lors de la prédiction. Code de statut HTTP : ", response.status_code)
+        st.error(f"Une erreur s'est produite lors de la prédiction. Code de statut HTTP : {response.status_code}")
+
 
 
 # # Bouton pour envoyer les données à l'API
