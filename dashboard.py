@@ -3,7 +3,7 @@ import requests
 import json
 
 # Utilisez le bon endpoint URL
-url = "https://tester-api.streamlit.app/hello/"
+url = "https://tester-api.streamlit.app/hello"
 
 # Utilisez le bon format de données pour la requête
 data = json.dumps({"msg": "c moi"})
