@@ -7,7 +7,5 @@ app = FastAPI()
 @app.post('/predict/')
 async def predict(data: dict):
     # Simulez une prédiction ici
-    print("La fonction predict a débuté son exécution.")
-
-    reponse = {"result": "reponse effectuée avec succès", "data": data}
-    return reponse
+    response_data = {"result": "Prédiction effectuée avec succès", "data": data}
+    return response_data  # Assurez-vous que la réponse est un dictionnaire JSON valide
