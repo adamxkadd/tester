@@ -17,7 +17,7 @@ if st.button("Prédire"):
     st.write(data)
     
     response = requests.post(f"{API_URL}/predict/", json=data)
-    
+    st.write(response)
 #     if response.status_code == 200:
 #         result = response.json()
 #         st.success(result["result"])
