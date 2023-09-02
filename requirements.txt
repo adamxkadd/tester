@@ -1,4 +1,3 @@
-
-fastapi
-streamlit
-requests
+fastapi==0.68.1
+streamlit==1.14.0
+requests==2.26.0
